@@ -16,7 +16,7 @@
 #define red 10
 
 DHT dht(DHTPIN, DHTTYPE);
-LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
+LCDKeypad lcd;
 
 void setup() {
   Serial.begin(9600);
