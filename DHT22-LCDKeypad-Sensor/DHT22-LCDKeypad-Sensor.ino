@@ -57,14 +57,14 @@ void get_sens()
   // Sensor readings may also be up to 2 seconds 'old' (its a very slow sensor)
   int h = dht.readHumidity();
   // Read temperature as Celsius (the default)
-  int t = dht.readTemperature();
+  float t = dht.readTemperature();
 
   lcd.setCursor(0, 1);
   lcd.write(1);
   lcd.print(" ");
-  lcd.print(t);
+  lcd.print(t,1);
   lcd.print((char)223); //degree sign
-  lcd.print("C     ");
+  lcd.print("C   ");
   lcd.write(2);
   lcd.print(" ");
   lcd.print(h);
